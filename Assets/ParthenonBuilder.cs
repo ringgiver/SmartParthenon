@@ -22,6 +22,9 @@ public class ParthenonBuilder : MonoBehaviour {
     [ContextMenu("Build")]
     void Build()
     {
+
+        DestroyAllChildren();
+
         var floor1 = Instantiate(cubePrefab, transform);
         floor1.transform.localPosition = new Vector3(0, 0, 0);
         floor1.transform.localScale = new Vector3(floorWidth, floorHeight, floorDepth);
